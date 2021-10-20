@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <!-- 进程Process -->
+    <div>
+        <h2>进程</h2>
+        <button onclick="getProcessInfo()">查看process信息</button>
+    </div>
+
+    <!-- flie -->
+    <div class="fileBox" id="fileDrag">
+      <h2>文件对象</h2>
+      <span>往这里拖文件</span>
+    </div>
+
+    <!-- webView -->
+    <div class="webView">
+      <h2>webView</h2>
+      <span id="content"></span>
+      <!--webView 和 preload脚本注入 -->
+      <webView id='WB' src='https://www.bilibili.com/' preload='./webView_script/preload.js'></webView> 
+    </div>
+
+    <!-- window-open -->
+    <div>
+      <h2>window-open</h2>
+      <button onclick="openWindow()">打开新窗口</button>
+      <button onclick="closeWindow()">关闭子窗口</button>
+    </div>
+
+    <!-- dialog 对话框 -->
+    <div>
+      <h2>dialog 对话框</h2>
+      <button onclick="openDialog()">打开对话框</button>
+    </div>
+
+    <!-- 进程通信 -->
+    <div>
+      <h2>进程通信</h2>
+      <button onclick="sendMessage()">获取主进程信息</button>
+    </div>
+
+    <!-- 自定义菜单 -->
+    <div>
+      <h2>自定义菜单</h2>
+      <input type="text">
+      <button onclick="openMenu()">展示菜单</button>
+    </div>
+
+    <!-- 使用electron内置请求模块 -->
+    <div>
+      <h2>请求模块</h2>
+      <button onclick="request()">发送请求</button>
+    </div>
+</body>
+<script src="./renderer.js"></script>
+</html>

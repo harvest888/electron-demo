@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子窗口</title></title>
+</head>
+<body>
+    <div>
+        <h1>我是子窗口</h1>
+        <button onclick="sendMsg()">向父窗口发送信息</button>
+    </div>
+</body>
+<script>
+    function sendMsg() {
+        window.opener.postMessage({
+            type: 'son',
+            msg: '传给父窗口'
+        })
+    }
+</script>
+</html>

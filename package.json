@@ -1,0 +1,54 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --inspect=5859 .",
+    "pao": "nodemon --watch main.js --exec \"electron .\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "electron": "13.5.1",
+    "electron-builder": "^22.13.1",
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.1"
+  },
+  "build": {
+    "appId": "your.id",
+    "productName": "OMS",
+    "compression": "store",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "icon": "./sad.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./src/sad.ico",
+      "uninstallerIcon": "./src/sad.ico",
+      "installerHeaderIcon": "./src/sad.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "xxxx",
+      "include": "build/script/installer.nsh"
+    }
+  }
+}

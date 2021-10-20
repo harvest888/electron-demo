@@ -1,0 +1,10 @@
+/* styles.css */
+.fileBox {
+    height: 300px; 
+    width: 300px; 
+    background-color: aqua;
+}
+.webView {
+    display:inline-flex; width:640px; height:480px
+}
+/* Add styles here to customize the appearance of your app */
