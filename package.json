@@ -8,9 +8,9 @@
     "pao": "nodemon --watch main.js --exec \"electron .\"",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "release": "cross-env GH_TOKEN=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 electron-builder --dir -p always"
+    "release": "cross-env GH_TOKEN=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 electron-builder"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/harvest888/electron-demo",
   "keywords": [
     "Electron",
     "quick",
@@ -45,13 +45,13 @@
       "oneClick": false,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "./src/sad.ico",
-      "uninstallerIcon": "./src/sad.ico",
-      "installerHeaderIcon": "./src/sad.ico",
+      "installerIcon": "./sad.ico",
+      "uninstallerIcon": "./sad.ico",
+      "installerHeaderIcon": "./sad.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "xxxx",
-      "include": "build/script/installer.nsh"
+      "include": "./installer.nsh"
     }
   }
 }
