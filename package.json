@@ -1,13 +1,14 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron --inspect=5859 .",
     "pao": "nodemon --watch main.js --exec \"electron .\"",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "release": "cross-env GH_TOKEN=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 electron-builder --dir -p always"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -20,6 +21,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "devtron": "^1.4.0",
     "electron": "13.5.1",
     "electron-builder": "^22.13.1",
@@ -38,7 +40,7 @@
     "win": {
       "icon": "./sad.ico"
     },
-    "publish":["github"],
+    "publish": ["github"],
     "nsis": {
       "oneClick": false,
       "allowElevation": true,
