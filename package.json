@@ -28,7 +28,7 @@
     "nodemon": "^2.0.14"
   },
   "dependencies": {
-    "@electron/remote": "^2.0.1"
+    "@electron/remote": "^2.0.7"
   },
   "build": {
     "appId": "your.id",
